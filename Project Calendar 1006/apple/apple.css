@@ -1,0 +1,98 @@
+/* Global styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    background-color: #007aff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.tab.active {
+    background-color: #007aff;
+    color: white;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+/* Styles specific to each tab content */
+#apple-day-content {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+#apple-month-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#apple-year-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Common styles for calendar grid items */
+.apple-calendar-item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Example styles for different states */
+.apple-calendar-item.today {
+    background-color: #007aff;
+    color: white;
+}
+
+.apple-calendar-item.selected {
+    background-color: #4cd964;
+    color: white;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab {
+        margin-bottom: 10px;
+    }
+}
