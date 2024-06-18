@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/public/dashboard/styles.css">
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-icons-outlined">search</span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span>
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined">dashboard</span> Dashboard
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+            </div>
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="index.html">
+                        <span class="material-icons-outlined">dashboard</span> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="Calendar/cal.html">
+                        <span class="material-icons-outlined">inventory_2</span> Calendar
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="inbox/inboxpage.html">
+                        <span class="material-icons-outlined">inbox</span> Inbox
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="charts/chart.html">
+                        <span class="material-icons-outlined">poll</span> Charts
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">settings</span> Settings
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- End Sidebar -->
+
+        <!-- Main -->
+        <main class="main-container">
+            <div class="main-title">
+                <h2>Dashboard</h2>
+            </div>
+
+            <!-- Inbox Section -->
+            <div class="inbox-section">
+                <h2>Inbox</h2>
+                <div class="inbox-messages">
+                    <div class="message">
+                        <div class="message-content">
+                            <h3>Subject 1</h3>
+                            <p>Message content goes here...</p>
+                        </div>
+                        <div class="message-date">
+                            <p>June 12, 2024</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            <h3>Subject 2</h3>
+                            <p>Message content goes here...</p>
+                        </div>
+                        <div class="message-date">
+                            <p>June 10, 2024</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            <h3>Subject 3</h3>
+                            <p>Message content goes here...</p>
+                        </div>
+                        <div class="message-date">
+                            <p>June 8, 2024</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            <h3>Subject 4</h3>
+                            <p>Message content goes here...</p>
+                        </div>
+                        <div class="message-date">
+                            <p>June 5, 2024</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            <h3>Subject 5</h3>
+                            <p>Message content goes here...</p>
+                        </div>
+                        <div class="message-date">
+                            <p>June 2, 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Report Chart Section -->
+            <div class="weekly-report-section">
+                <h2>Weekly Report</h2>
+                <div class="weekly-report-chart">
+                    <!-- Insert your weekly report chart here (ApexCharts or any other library) -->
+                </div>
+            </div>
+
+            <!-- Last To-Do List Item Section -->
+            <div class="last-todo-section">
+                <h2>Last To-Do List Item</h2>
+                <div class="last-todo-item">
+                    <input type="checkbox" id="last-task" checked>
+                    <label for="last-task">Review Code</label>
+                </div>
+            </div>
+
+        </main>
+        <!-- End Main -->
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/todo.js"></script>
+</body>
+
+</html>
